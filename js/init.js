@@ -305,16 +305,19 @@ jQuery('.arlo_tm_counter').each(function () {
 // -------------------------------------------------
 
 function arlo_tm_animate_text() {
+  let animateSpan = jQuery(".arlo_tm_animation_text_word");
 
-
-    let animateSpan = jQuery('.arlo_tm_animation_text_word');
-
-    animateSpan.typed({
-        strings: ["Frontend Developer", "Photographer"],
-        loop: true,
-        startDelay: 1e3,
-        backDelay: 2e3
-    });
+  animateSpan.typed({
+    strings: [
+      "'m a Frontend Developer",
+      "'m a photographer",
+      "'m a sister too",
+      "'m a teacher also",
+    ],
+    loop: true,
+    startDelay: 1e3,
+    backDelay: 2e3,
+  });
 }
 
 // -----------------------------------------------------
@@ -322,30 +325,29 @@ function arlo_tm_animate_text() {
 // -----------------------------------------------------
 
 function arlo_tm_popup() {
-
-
-    jQuery('.gallery_zoom').each(function () { // the containers for all your galleries
-        jQuery(this).magnificPopup({
-            delegate: 'a.zoom', // the selector for gallery item
-            type: 'image',
-            gallery: {
-                enabled: true
-            },
-            removalDelay: 300,
-            mainClass: 'mfp-fade'
-        });
-
+  jQuery(".gallery_zoom").each(function () {
+    // the containers for all your galleries
+    jQuery(this).magnificPopup({
+      delegate: "a.zoom", // the selector for gallery item
+      type: "image",
+      gallery: {
+        enabled: true,
+      },
+      removalDelay: 300,
+      mainClass: "mfp-fade",
     });
-    jQuery('.popup-youtube').each(function () { // the containers for all your galleries
-        jQuery(this).magnificPopup({
-            disableOn: 700,
-            type: 'iframe',
-            mainClass: 'mfp-fade',
-            removalDelay: 160,
-            preloader: false,
-            fixedContentPos: false
-        });
+  });
+  jQuery(".popup-youtube").each(function () {
+    // the containers for all your galleries
+    jQuery(this).magnificPopup({
+      disableOn: 700,
+      type: "iframe",
+      mainClass: "mfp-fade",
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false,
     });
+  });
 }
 
 // -----------------------------------------------------
@@ -358,35 +360,36 @@ new WOW().init();
 // -------------------  ANCHOR ---------------------
 // -------------------------------------------------
 
-jQuery('.anchor_nav').onePageNav();
+jQuery(".anchor_nav").onePageNav();
 
 // -----------------------------------------------------
 // ---------------   MOBILE MENU    --------------------
 // -----------------------------------------------------
 
 function arlo_tm_mobile_menu() {
+  let hamburger = jQuery(".hamburger");
+  let mobileMenu = jQuery(".arlo_tm_mobile_menu .dropdown");
 
+  hamburger.on("click", function () {
+    let element = jQuery(this);
 
-    let hamburger = jQuery('.hamburger');
-    let mobileMenu = jQuery('.arlo_tm_mobile_menu .dropdown');
-
-    hamburger.on('click', function () {
-        let element = jQuery(this);
-
-        if (element.hasClass('is-active')) {
-            element.removeClass('is-active');
-            mobileMenu.slideUp();
-        } else {
-            element.addClass('is-active');
-            mobileMenu.slideDown();
-        }
-        return false;
-    });
-    jQuery('.arlo_tm_mobile_menu .dropdown .dropdown_inner ul li a').on('click', function () {
-        hamburger.removeClass('is-active');
-        mobileMenu.slideUp();
-        return false;
-    });
+    if (element.hasClass("is-active")) {
+      element.removeClass("is-active");
+      mobileMenu.slideUp();
+    } else {
+      element.addClass("is-active");
+      mobileMenu.slideDown();
+    }
+    return false;
+  });
+  jQuery(".arlo_tm_mobile_menu .dropdown .dropdown_inner ul li a").on(
+    "click",
+    function () {
+      hamburger.removeClass("is-active");
+      mobileMenu.slideUp();
+      return false;
+    }
+  );
 }
 
 // -----------------------------------------------------
@@ -394,41 +397,52 @@ function arlo_tm_mobile_menu() {
 // -----------------------------------------------------
 
 function arlo_tm_down() {
+  let topbar = jQuery(".arlo_tm_topbar").outerHeight();
+  jQuery(".arlo_tm_arrow_wrap a").on("click", function () {
+    if ($(".arlo_tm_topbar").length) {
+      if ($.attr(this, "href") !== "#") {
+        $("html, body").animate(
+          {
+            scrollTop: $($.attr(this, "href")).offset().top - topbar + 3,
+          },
+          800
+        );
+      }
+    } else {
+      if ($.attr(this, "href") !== "#") {
+        $("html, body").animate(
+          {
+            scrollTop: $($.attr(this, "href")).offset().top,
+          },
+          800
+        );
+      }
+    }
+    return false;
+  });
 
-    let topbar = jQuery('.arlo_tm_topbar').outerHeight();
-    jQuery('.arlo_tm_arrow_wrap a').on('click', function () {
-        if ($('.arlo_tm_topbar').length) {
-            if ($.attr(this, 'href') !== '#') {
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top - topbar + 3
-                }, 800);
-            }
-        } else {
-            if ($.attr(this, 'href') !== '#') {
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top
-                }, 800);
-            }
-        }
-        return false;
-    });
-
-    jQuery('.arlo_tm_services .lets_work a').on('click', function () {
-        if ($('.arlo_tm_topbar').length) {
-            if ($.attr(this, 'href') !== '#') {
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top - topbar + 3
-                }, 800);
-            }
-        } else {
-            if ($.attr(this, 'href') !== '#') {
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top
-                }, 800);
-            }
-        }
-        return false;
-    });
+  jQuery(".arlo_tm_services .lets_work a").on("click", function () {
+    if ($(".arlo_tm_topbar").length) {
+      if ($.attr(this, "href") !== "#") {
+        $("html, body").animate(
+          {
+            scrollTop: $($.attr(this, "href")).offset().top - topbar + 3,
+          },
+          800
+        );
+      }
+    } else {
+      if ($.attr(this, "href") !== "#") {
+        $("html, body").animate(
+          {
+            scrollTop: $($.attr(this, "href")).offset().top,
+          },
+          800
+        );
+      }
+    }
+    return false;
+  });
 }
 
 // -----------------------------------------------------
@@ -436,32 +450,31 @@ function arlo_tm_down() {
 // -----------------------------------------------------
 
 function arlo_tm_imgtosvg() {
+  jQuery("img.svg").each(function () {
+    let jQueryimg = jQuery(this);
+    let imgClass = jQueryimg.attr("class");
+    let imgURL = jQueryimg.attr("src");
 
+    jQuery.get(
+      imgURL,
+      function (data) {
+        // Get the SVG tag, ignore the rest
+        let jQuerysvg = jQuery(data).find("svg");
 
-    jQuery('img.svg').each(function () {
+        // Add replaced image's classes to the new SVG
+        if (typeof imgClass !== "undefined") {
+          jQuerysvg = jQuerysvg.attr("class", imgClass + " replaced-svg");
+        }
 
-        let jQueryimg = jQuery(this);
-        let imgClass = jQueryimg.attr('class');
-        let imgURL = jQueryimg.attr('src');
+        // Remove any invalid XML tags as per http://validator.w3.org
+        jQuerysvg = jQuerysvg.removeAttr("xmlns:a");
 
-        jQuery.get(imgURL, function (data) {
-            // Get the SVG tag, ignore the rest
-            let jQuerysvg = jQuery(data).find('svg');
-
-            // Add replaced image's classes to the new SVG
-            if (typeof imgClass !== 'undefined') {
-                jQuerysvg = jQuerysvg.attr('class', imgClass + ' replaced-svg');
-            }
-
-            // Remove any invalid XML tags as per http://validator.w3.org
-            jQuerysvg = jQuerysvg.removeAttr('xmlns:a');
-
-            // Replace image with new SVG
-            jQueryimg.replaceWith(jQuerysvg);
-
-        }, 'xml');
-
-    });
+        // Replace image with new SVG
+        jQueryimg.replaceWith(jQuerysvg);
+      },
+      "xml"
+    );
+  });
 }
 
 // -----------------------------------------------------
@@ -469,15 +482,13 @@ function arlo_tm_imgtosvg() {
 // -----------------------------------------------------
 
 function arlo_tm_data_images() {
+  let data = jQuery("*[data-img-url]");
 
-
-    let data = jQuery('*[data-img-url]');
-
-    data.each(function () {
-        let element = jQuery(this);
-        let url = element.data('img-url');
-        element.css({ backgroundImage: 'url(' + url + ')' });
-    });
+  data.each(function () {
+    let element = jQuery(this);
+    let url = element.data("img-url");
+    element.css({ backgroundImage: "url(" + url + ")" });
+  });
 }
 
 // -----------------------------------------------------
@@ -485,85 +496,85 @@ function arlo_tm_data_images() {
 // -----------------------------------------------------
 
 function arlo_tm_jarallax() {
+  jQuery(".jarallax").each(function () {
+    let element = jQuery(this);
+    let customSpeed = element.data("speed");
 
+    if (customSpeed !== "undefined" && customSpeed !== "") {
+      customSpeed = customSpeed;
+    } else {
+      customSpeed = 0.5;
+    }
 
-    jQuery('.jarallax').each(function () {
-        let element = jQuery(this);
-        let customSpeed = element.data('speed');
-
-        if (customSpeed !== "undefined" && customSpeed !== "") {
-            customSpeed = customSpeed;
-        } else {
-            customSpeed = 0.5;
-        }
-
-        element.jarallax({
-            speed: customSpeed,
-            automaticResize: true
-        });
+    element.jarallax({
+      speed: customSpeed,
+      automaticResize: true,
     });
+  });
 }
 
 // -------------------------------------------------
 // -----------------    PORTFOLIO    ---------------
 // -------------------------------------------------
 
-// filterable 
+// filterable
 
 function arlo_tm_portfolio() {
+  if (jQuery().isotope) {
+    // Needed letiables
+    let list = jQuery(".arlo_tm_portfolio .portfolio_list ul");
+    let filter = jQuery(".arlo_tm_portfolio .portfolio_filter ul");
 
+    if (filter.length) {
+      // Isotope Filter
+      filter.find("a").on("click", function () {
+        let selector = jQuery(this).attr("data-filter");
+        list.isotope({
+          filter: selector,
+          animationOptions: {
+            duration: 750,
+            easing: "linear",
+            queue: false,
+          },
+        });
+        return false;
+      });
 
-    if (jQuery().isotope) {
-
-        // Needed letiables
-        let list = jQuery('.arlo_tm_portfolio .portfolio_list ul');
-        let filter = jQuery('.arlo_tm_portfolio .portfolio_filter ul');
-
-        if (filter.length) {
-            // Isotope Filter 
-            filter.find('a').on('click', function () {
-                let selector = jQuery(this).attr('data-filter');
-                list.isotope({
-                    filter: selector,
-                    animationOptions: {
-                        duration: 750,
-                        easing: 'linear',
-                        queue: false
-                    }
-                });
-                return false;
-            });
-
-            // Change active element class
-            filter.find('a').on('click', function () {
-                filter.find('a').removeClass('current');
-                jQuery(this).addClass('current');
-                return false;
-            });
-        }
+      // Change active element class
+      filter.find("a").on("click", function () {
+        filter.find("a").removeClass("current");
+        jQuery(this).addClass("current");
+        return false;
+      });
     }
+  }
 }
 
 function arlo_tm_projects() {
+  jQuery(".arlo_tm_portfolio_animation_wrap").each(function () {
+    jQuery(this)
+      .on("mouseenter", function () {
+        if (jQuery(this).data("title")) {
+          jQuery(".arlo_tm_portfolio_titles").html(
+            jQuery(this).data("title") +
+              '<span class="work__cat">' +
+              jQuery(this).data("category") +
+              "</span>"
+          );
+          jQuery(".arlo_tm_portfolio_titles").addClass("visible");
+        }
 
-
-    jQuery('.arlo_tm_portfolio_animation_wrap').each(function () {
-        jQuery(this).on('mouseenter', function () {
-            if (jQuery(this).data('title')) {
-                jQuery('.arlo_tm_portfolio_titles').html(jQuery(this).data('title') + '<span class="work__cat">' + jQuery(this).data('category') + '</span>');
-                jQuery('.arlo_tm_portfolio_titles').addClass('visible');
-            }
-
-            jQuery(document).on('mousemove', function (e) {
-                jQuery('.arlo_tm_portfolio_titles').css({
-                    left: e.clientX - 10,
-                    top: e.clientY + 25
-                });
-            });
-        }).on('mouseleave', function () {
-            jQuery('.arlo_tm_portfolio_titles').removeClass('visible');
+        jQuery(document).on("mousemove", function (e) {
+          jQuery(".arlo_tm_portfolio_titles").css({
+            left: e.clientX - 10,
+            top: e.clientY + 25,
+          });
         });
-    });
+      })
+      .on("mouseleave", function () {
+        jQuery(".arlo_tm_portfolio_titles").removeClass("visible");
+      });
+  });
 }
 
 // -----------------------------------------------------
@@ -571,14 +582,10 @@ function arlo_tm_projects() {
 // -----------------------------------------------------
 
 function arlo_tm_isotope() {
-
-
-    jQuery('.masonry').isotope({
-        itemSelector: '.masonry_item',
-        masonry: {
-
-        }
-    });
+  jQuery(".masonry").isotope({
+    itemSelector: ".masonry_item",
+    masonry: {},
+  });
 }
 
 // -----------------------------------------------------
@@ -586,44 +593,55 @@ function arlo_tm_isotope() {
 // -----------------------------------------------------
 
 function arlo_tm_contact_form() {
+  jQuery(".contact_form #send_message").on("click", function () {
+    let name = jQuery(".contact_form #name").val();
+    let email = jQuery(".contact_form #email").val();
+    let message = jQuery(".contact_form #message").val();
+    let subject = jQuery(".contact_form #subject").val();
+    let success = jQuery(".contact_form .returnmessage").data("success");
 
+    jQuery(".contact_form .returnmessage").empty(); //To empty previous error/success message.
+    //checking for blank fields
+    if (name === "" || email === "" || message === "") {
+      jQuery("div.empty_notice").slideDown(500).delay(2000).slideUp(500);
+    } else {
+      // Returns successful data submission message when the entered information is stored in database.
+      jQuery.post(
+        "modal/contact.php",
+        {
+          ajax_name: name,
+          ajax_email: email,
+          ajax_message: message,
+          ajax_subject: subject,
+        },
+        function (data) {
+          jQuery(".contact_form .returnmessage").append(data); //Append returned message to message paragraph
 
-    jQuery(".contact_form #send_message").on('click', function () {
+          if (
+            jQuery(".contact_form .returnmessage span.contact_error").length
+          ) {
+            jQuery(".contact_form .returnmessage")
+              .slideDown(500)
+              .delay(2000)
+              .slideUp(500);
+          } else {
+            jQuery(".contact_form .returnmessage").append(
+              "<span class='contact_success'>" + success + "</span>"
+            );
+            jQuery(".contact_form .returnmessage")
+              .slideDown(500)
+              .delay(4000)
+              .slideUp(500);
+          }
 
-        let name = jQuery(".contact_form #name").val();
-        let email = jQuery(".contact_form #email").val();
-        let message = jQuery(".contact_form #message").val();
-        let subject = jQuery(".contact_form #subject").val();
-        let success = jQuery(".contact_form .returnmessage").data('success');
-
-        jQuery(".contact_form .returnmessage").empty(); //To empty previous error/success message.
-        //checking for blank fields	
-        if (name === '' || email === '' || message === '') {
-
-            jQuery('div.empty_notice').slideDown(500).delay(2000).slideUp(500);
+          if (data === "") {
+            jQuery("#contact_form")[0].reset(); //To reset form fields on success
+          }
         }
-        else {
-            // Returns successful data submission message when the entered information is stored in database.
-            jQuery.post("modal/contact.php", { ajax_name: name, ajax_email: email, ajax_message: message, ajax_subject: subject }, function (data) {
-
-                jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
-
-
-                if (jQuery(".contact_form .returnmessage span.contact_error").length) {
-                    jQuery(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);
-                } else {
-                    jQuery(".contact_form .returnmessage").append("<span class='contact_success'>" + success + "</span>");
-                    jQuery(".contact_form .returnmessage").slideDown(500).delay(4000).slideUp(500);
-                }
-
-                if (data === "") {
-                    jQuery("#contact_form")[0].reset();//To reset form fields on success
-                }
-
-            });
-        }
-        return false;
-    });
+      );
+    }
+    return false;
+  });
 }
 
 // -----------------------------------------------------
@@ -631,15 +649,15 @@ function arlo_tm_contact_form() {
 // -----------------------------------------------------
 
 function arlo_tm_location() {
-    let button = jQuery('.href_location');
-    button.on('click', function () {
-        let element = jQuery(this);
-        let address = element.text();
-        address = address.replace(/\ /g, '+');
-        let text = 'https://maps.google.com?q=';
-        window.open(text + address);
-        return false;
-    });
+  let button = jQuery(".href_location");
+  button.on("click", function () {
+    let element = jQuery(this);
+    let address = element.text();
+    address = address.replace(/\ /g, "+");
+    let text = "https://goo.gl/maps/yF8dgdKYFXzVAs3J6";
+    window.open(text + address);
+    return false;
+  });
 }
 
 // -------------------------------------------------

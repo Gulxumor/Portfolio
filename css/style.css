@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200i,300,300i,400,400i,500,500i,600,700,700i,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -10,7 +10,6 @@ html {
 
 body {
     font-family: "Mulish";
-    font-size: 16px;
     line-height: 2;
     letter-spacing: 0.5px;
     word-wrap: break-word;
@@ -161,12 +160,12 @@ h6 {
     height: 100%;
     width: 100%;
 
-    -webkit-transition: .2s all ease;
-    -o-transition: .2s all ease;
-    transition: .2s all ease;
-    -webkit-transition-delay: .5s;
-    -o-transition-delay: .5s;
-    transition-delay: .5s;
+    -webkit-transition: 0.2s all ease;
+        -o-transition: 0.2s all ease;
+        transition: 0.2s all ease;
+        -webkit-transition-delay: 0.5s;
+        -o-transition-delay: 0.5s;
+        transition-delay: 0.5s;
 }
 
 .arlo_tm_preloader .spinner_wrap {
@@ -190,9 +189,9 @@ h6 {
     width: 100%;
     background-color: #000;
 
-    -webkit-transition: .7s all ease;
-    -o-transition: .7s all ease;
-    transition: .7s all ease;
+    -webkit-transition: 0.7s all ease;
+        -o-transition: 0.7s all ease;
+        transition: 0.7s all ease;
 }
 
 .arlo_tm_preloader:before {
@@ -210,9 +209,9 @@ h6 {
     height: 0%;
 }
 
-/*---------------------------------------------------*/
-/*	02) ARLO TOPBAR
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	02) ARLO TOPBAR
+/*!---------------------------------------------------*/
 
 .arlo_tm_topbar {
     position: fixed;
@@ -222,11 +221,11 @@ h6 {
     z-index: 10;
     padding: 20px 0px;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_topbar.animate {
@@ -249,6 +248,7 @@ h6 {
 
 .arlo_tm_topbar.animate .logo .dark {
     display: block;
+    border-radius: 50%;
 }
 
 .arlo_tm_topbar.animate .logo .light {
@@ -257,6 +257,7 @@ h6 {
 
 .arlo_tm_topbar .logo img {
     max-width: 50px;
+    border-radius: 10%;
 }
 
 .arlo_tm_topbar .menu ul {
@@ -279,11 +280,11 @@ h6 {
     font-family: "Poppins";
     font-weight: 500;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_topbar.animate .menu ul li a {
@@ -298,9 +299,9 @@ h6 {
     color: #e65f78;
 }
 
-/*---------------------------------------------------*/
-/*	03) ARLO MOBILE MENU
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	03) ARLO MOBILE MENU
+/*!---------------------------------------------------*/
 
 .arlo_tm_mobile_menu {
     width: 100%;
@@ -319,7 +320,7 @@ h6 {
     clear: both;
     background-color: #fff;
     padding: 15px 0px;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .arlo_tm_mobile_menu .mobile_in {
@@ -334,6 +335,7 @@ h6 {
 
 .arlo_tm_mobile_menu .mobile_in .logo img {
     max-width: 50px;
+    border-radius: 10%;
 }
 
 .my_trigger .hamburger {
@@ -405,11 +407,13 @@ h6 {
 
 .my_trigger .hamburger--collapse-r .hamburger-inner::after {
     top: -16px;
-    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+            opacity 0.1s linear;
 }
 
 .my_trigger .hamburger--collapse-r .hamburger-inner::before {
-    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+            transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .my_trigger .hamburger--collapse-r.is-active .hamburger-inner {
@@ -421,13 +425,15 @@ h6 {
 .my_trigger .hamburger--collapse-r.is-active .hamburger-inner::after {
     top: 0;
     opacity: 0;
-    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+            opacity 0.1s 0.22s linear;
 }
 
 .my_trigger .hamburger--collapse-r.is-active .hamburger-inner::before {
     top: 0;
     transform: rotate(90deg);
-    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+            transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .my_trigger .hamburger {
@@ -447,11 +453,11 @@ h6 {
     background-color: #000;
     width: 30px;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_mobile_menu .dropdown {
@@ -460,7 +466,7 @@ h6 {
     clear: both;
     float: left;
     background-color: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     display: none;
 }
 
@@ -492,9 +498,9 @@ h6 {
     font-weight: 500;
 }
 
-/*---------------------------------------------------*/
-/*	04) ARLO HERO
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	04) ARLO HERO
+/*!---------------------------------------------------*/
 
 .arlo_tm_hero {
     width: 100%;
@@ -530,7 +536,7 @@ h6 {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
@@ -571,7 +577,7 @@ h6 {
     left: -8px;
     right: -8px;
     border-radius: 100%;
-    background-color: rgba(255, 255, 255, .08);
+    background-color: rgba(255, 255, 255, 0.08);
     z-index: -1;
 }
 
@@ -662,9 +668,9 @@ h6 {
     font-size: 30px;
 }
 
-/*---------------------------------------------------*/
-/*	05) ARLO ABOUT
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	05) ARLO ABOUT
+/*!---------------------------------------------------*/
 
 .arlo_tm_about {
     width: 100%;
@@ -789,7 +795,7 @@ h6 {
 
 .arlo_tm_about .about_short_contact_wrap ul li {
     margin: 0px 0px 10px 0px;
-    width: 50%;
+    width: 65%;
     float: left;
     position: relative;
     padding-left: 30px;
@@ -812,22 +818,22 @@ h6 {
     position: relative;
     display: inline-block;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_about .about_short_contact_wrap ul li a:after {
-    content: '';
+    content: "";
     width: 0;
     height: 1px;
     position: absolute;
     left: auto;
     right: 0;
     bottom: 0;
-    transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
+    transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
     background: currentColor;
 }
 
@@ -871,9 +877,9 @@ h6 {
     height: 100%;
     left: -25%;
     width: 0%;
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, 0.1);
     transform: skew(50deg);
-    transition-duration: .6s;
+    transition-duration: 0.6s;
     z-index: 1;
 }
 
@@ -881,9 +887,9 @@ h6 {
     width: 150%;
 }
 
-/*---------------------------------------------------*/
-/*	06) ARLO SERVICES
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	06) ARLO SERVICES
+/*!---------------------------------------------------*/
 
 .arlo_tm_services {
     width: 100%;
@@ -924,19 +930,19 @@ h6 {
     clear: both;
     float: left;
     position: relative;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .09);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.09);
     padding: 60px 40px 53px 40px;
     background-color: #fff;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_services .service_inner ul li .inner:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .2);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
 .arlo_tm_services .service_inner ul li .inner .svg {
@@ -974,25 +980,25 @@ h6 {
 }
 
 .arlo_tm_services .lets_work a:before {
-    content: '';
+    content: "";
     width: 100%;
     height: 1px;
     position: absolute;
     left: auto;
     right: 0;
     bottom: 3px;
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .arlo_tm_services .lets_work a:after {
-    content: '';
+    content: "";
     width: 0;
     height: 1px;
     position: absolute;
     left: auto;
     right: 0;
     bottom: 3px;
-    transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
+    transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
     background: currentColor;
 }
 
@@ -1002,9 +1008,9 @@ h6 {
     right: auto;
 }
 
-/*---------------------------------------------------*/
-/*	07) ARLO PORTFOLIO
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	07) ARLO PORTFOLIO
+/*!---------------------------------------------------*/
 
 .arlo_tm_portfolio {
     width: 100%;
@@ -1053,11 +1059,11 @@ h6 {
     font-weight: 500;
     font-family: "Poppins";
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_portfolio .portfolio_filter ul li a.current {
@@ -1111,11 +1117,11 @@ h6 {
     background-position: center;
     background-size: cover;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_portfolio .portfolio_list ul li .inner:hover .main_image {
@@ -1157,9 +1163,9 @@ h6 {
     position: relative;
 }
 
-/*---------------------------------------------------*/
-/*	08) ARLO COUNTER
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	08) ARLO COUNTER
+/*!---------------------------------------------------*/
 
 .arlo_tm_counter_section {
     width: 100%;
@@ -1179,7 +1185,7 @@ h6 {
     right: 0px;
     background-image: url(..//img/patterns/ravenna.png);
     background-repeat: repeat;
-    opacity: .4;
+    opacity: 0.4;
     /**  If you choose lighter pattern image as background please Decrease opacity  **/
     z-index: 2;
 }
@@ -1237,9 +1243,9 @@ h6 {
     color: #fff;
 }
 
-/*---------------------------------------------------*/
-/*	09) ARLO NEWS
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	09) ARLO NEWS
+/*!---------------------------------------------------*/
 
 .arlo_tm_news {
     width: 100%;
@@ -1301,11 +1307,11 @@ h6 {
     background-position: center;
     transform: scale(1) translateZ(0);
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_news .news_list ul li .list_inner .image:hover .main {
@@ -1330,11 +1336,11 @@ h6 {
     font-weight: 600;
     display: inline-block;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_news .news_list ul li .details .title a:hover {
@@ -1353,11 +1359,11 @@ h6 {
     text-decoration: none;
     color: #767676;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_news .news_list ul li .details .date a:hover {
@@ -1401,15 +1407,15 @@ body.modal {
     right: 0px;
     height: 100vh;
     z-index: 15;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     visibility: hidden;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_modalbox_news.opened {
@@ -1454,13 +1460,13 @@ body.modal {
     visibility: hidden;
     margin-top: -20px;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 
-    transition-delay: .3s;
+    transition-delay: 0.3s;
 }
 
 .arlo_tm_modalbox_news.opened .box_inner {
@@ -1559,11 +1565,11 @@ body.modal {
     text-decoration: none;
     color: #767676;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_modalbox_news .date a:hover {
@@ -1628,9 +1634,9 @@ body.modal {
     z-index: 4;
 }
 
-/*---------------------------------------------------*/
-/*	10) ARLO CONTACT
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	10) ARLO CONTACT
+/*!---------------------------------------------------*/
 
 .arlo_tm_contact {
     width: 100%;
@@ -1691,18 +1697,18 @@ body.modal {
 
 .arlo_tm_contact .fields ul li input {
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: #fff;
 }
 
 .arlo_tm_contact .fields ul li input:focus {
     outline: none;
-    border: 1px solid rgba(0, 0, 0, .5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .arlo_tm_contact .fields .last textarea {
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     height: 120px;
     resize: none;
     margin-bottom: 20px;
@@ -1711,11 +1717,11 @@ body.modal {
 
 .arlo_tm_contact .fields .last textarea:focus {
     outline: none;
-    border: 1px solid rgba(0, 0, 0, .5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .arlo_tm_contact .empty_notice {
-    color: #F52225;
+    color: #f52225;
     margin-bottom: 7px;
     display: none;
     text-align: left;
@@ -1723,13 +1729,13 @@ body.modal {
 }
 
 .arlo_tm_contact .contact_error {
-    color: #F52225;
+    color: #f52225;
     text-align: left;
     font-weight: 500;
 }
 
 .arlo_tm_contact .returnmessage {
-    color: #3A00FF;
+    color: #3a00ff;
     margin-bottom: 7px;
     text-align: left;
     font-weight: 500;
@@ -1747,9 +1753,9 @@ body.modal {
     width: 100%;
 }
 
-/*---------------------------------------------------*/
-/*	11) ARLO COPYRIGHT
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	11) ARLO COPYRIGHT
+/*!---------------------------------------------------*/
 
 .arlo_tm_copyright {
     width: 100%;
@@ -1781,7 +1787,6 @@ body.modal {
 
 .arlo_tm_copyright .social ul li {
     margin: 0px 15px 0px 0px;
-    ;
     display: inline-block;
 }
 
@@ -1799,9 +1804,9 @@ body.modal {
     height: 18px;
 }
 
-/*---------------------------------------------------*/
-/*	12) ARLO CURSOR
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	12) ARLO CURSOR
+/*!---------------------------------------------------*/
 
 .mouse-cursor {
     position: fixed;
@@ -1821,8 +1826,10 @@ body.modal {
     height: 6px;
     z-index: 100;
     background-color: #e65f78;
-    -webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
-    transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+            margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+            margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .cursor-inner.cursor-hover {
@@ -1831,7 +1838,7 @@ body.modal {
     width: 80px;
     height: 80px;
     background-color: #e65f78;
-    opacity: .3;
+    opacity: 0.3;
 }
 
 .cursor-outer {
@@ -1843,9 +1850,9 @@ body.modal {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     z-index: 100;
-    opacity: .5;
-    -webkit-transition: all .08s ease-out;
-    transition: all .08s ease-out;
+    opacity: 0.5;
+        -webkit-transition: all 0.08s ease-out;
+        transition: all 0.08s ease-out;
 }
 
 .cursor-outer.cursor-hover {
@@ -1860,9 +1867,9 @@ body.modal {
     z-index: -1111;
 }
 
-/*---------------------------------------------------*/
-/*	13) ARLO RIPPLE EFFECT
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	13) ARLO RIPPLE EFFECT
+/*!---------------------------------------------------*/
 
 .arlo_tm_hero .ripple {
     width: 100%;
@@ -1881,13 +1888,13 @@ body.modal {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
-/*---------------------------------------------------*/
-/*	14) ARLO GLITCH EFFECT
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	14) ARLO GLITCH EFFECT
+/*!---------------------------------------------------*/
 
 .arlo_tm_hero .glitch_wrap {
     position: relative;
@@ -1919,12 +1926,12 @@ body.modal {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-/*---------------------------------------------------*/
-/*	15) ARLO PARTICLE EFFECT
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	15) ARLO PARTICLE EFFECT
+/*!---------------------------------------------------*/
 
 .arlo_tm_hero .particle_wrapper {
     position: relative;
@@ -1967,9 +1974,9 @@ body.modal {
     clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%);
 }
 
-/*---------------------------------------------------*/
-/*	ARLO SIDEBAR DEMO
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	ARLO SIDEBAR DEMO
+/*!---------------------------------------------------*/
 
 .arlo_tm_leftpart {
     width: 400px;
@@ -1981,11 +1988,11 @@ body.modal {
     z-index: 3;
     box-shadow: 0 0 30px rgba(0, 34, 69, 0.05);
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_leftpart .inner {
@@ -2036,11 +2043,11 @@ body.modal {
     font-family: "Poppins";
     font-weight: 500;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_leftpart .inner .menu ul li.current a {
@@ -2060,7 +2067,7 @@ body.modal {
     content: "";
     width: 100%;
     height: 2px;
-    background-color: rgba(255, 255, 255, .015);
+    background-color: rgba(255, 255, 255, 0.015);
     left: 0px;
     bottom: 0px;
 }
@@ -2074,15 +2081,15 @@ body.modal {
     content: "";
     width: 0%;
     height: 2px;
-    background-color: rgba(255, 255, 255, .025);
+    background-color: rgba(255, 255, 255, 0.025);
     left: 0px;
     bottom: 0px;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_leftpart .inner .menu ul li:last-child a:after {
@@ -2117,11 +2124,11 @@ body.modal {
     text-decoration: none;
     color: #fff;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_leftpart .inner .bottom ul li a:hover {
@@ -2135,16 +2142,16 @@ body.modal {
     float: left;
     padding-left: 400px;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
-/*---------------------------------------------------*/
-/*  ARLO SETTINGS
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/* ! ARLO SETTINGS
+/*!---------------------------------------------------*/
 
 .arlo_tm_settings {
     position: fixed;
@@ -2152,14 +2159,14 @@ body.modal {
     top: 15%;
     right: -200px;
     width: 200px;
-    background-color: rgba(0, 0, 0, 1.00);
+    background-color: rgba(0, 0, 0, 1);
     padding: 40px 20px 33px 30px;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_settings.opened {
@@ -2234,7 +2241,7 @@ body.modal {
     content: "";
     width: 100%;
     height: 1px;
-    background-color: rgba(255, 255, 255, .2);
+    background-color: rgba(255, 255, 255, 0.2);
     left: 0px;
     bottom: 0px;
 }
@@ -2269,7 +2276,7 @@ body.modal {
 }
 
 .arlo_tm_settings .direction li a {
-    opacity: .4;
+    opacity: 0.4;
     text-decoration: none;
     color: #fff;
 }
@@ -2323,7 +2330,7 @@ body.dark .arlo_tm_settings .title,
 
 body.dark .arlo_tm_settings .title:before,
 .arlo_tm_settings.changed .title:before {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 body.dark .arlo_tm_settings .direction li a,
@@ -2360,7 +2367,7 @@ body.dark .arlo_tm_settings .cursor li .svg,
 .arlo_tm_settings .cursor li a {
     text-decoration: none;
     color: #fff;
-    opacity: .4;
+    opacity: 0.4;
     font-weight: 600;
 }
 
@@ -2416,7 +2423,7 @@ body.dark .arlo_tm_settings .cursor li .svg,
     text-align: center;
     border-radius: 100%;
     background-color: #fff;
-    opacity: .4;
+    opacity: 0.4;
 }
 
 .arlo_tm_settings .effect li a {
@@ -2435,9 +2442,9 @@ body.dark .arlo_tm_settings .cursor li .svg,
     opacity: 1;
 }
 
-/*---------------------------------------------------*/
-/*	ARLO INTRO
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	ARLO INTRO
+/*!---------------------------------------------------*/
 
 .arlo_tm_intro_hero .wp {
     position: absolute;
@@ -2451,7 +2458,7 @@ body.dark .arlo_tm_settings .cursor li .svg,
 
 .arlo_tm_intro_hero .wp a {
     text-decoration: none;
-    color: #FD575A;
+    color: #fd575a;
 }
 
 .arlo_tm_intro_hero {
@@ -2472,7 +2479,7 @@ body.dark .arlo_tm_settings .cursor li .svg,
     right: 0px;
     background-image: url(..//img/patterns/light-honeycomb.png);
     background-repeat: repeat;
-    opacity: .4;
+    opacity: 0.4;
     z-index: 2;
 }
 
@@ -2579,11 +2586,11 @@ body.dark .arlo_tm_settings .cursor li .svg,
     display: inline-block;
     position: relative;
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_intro_content .main_filter ul li a.current {
@@ -2602,26 +2609,6 @@ body.dark .arlo_tm_settings .cursor li .svg,
 .arlo_tm_intro_content .demo_list.current {
     display: block;
 }
-
-/* @-webkit-keyframes slide-down {
-    0% {
-        -webkit-transform: translateY(3%);
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-    }
-} */
-
-/* @-moz-keyframes slide-down {
-    0% {
-        -moz-transform: translateY(3%);
-    }
-
-    100% {
-        -moz-transform: translateY(0);
-    }
-} */
 
 .arlo_tm_intro_content .demo_list ul {
     margin: 0px 0px 0px -50px;
@@ -2646,11 +2633,11 @@ body.dark .arlo_tm_settings .cursor li .svg,
     top: 0px;
     transform: translateZ(0);
 
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 }
 
 .arlo_tm_intro_content .demo_list ul li .list_inner:hover {
@@ -2687,53 +2674,52 @@ body.dark .arlo_tm_settings .cursor li .svg,
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-
 }
 
 @-webkit-keyframes myAnimPrice {
     0% {
-        -webkit-transform: scale(.1);
-        transform: scale(.1);
-        opacity: 0
+        -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+            opacity: 0;
     }
 
     50% {
-        opacity: .3
+        opacity: 0.3;
     }
 
     100% {
         -webkit-transform: scale(2);
         transform: scale(2);
-        opacity: 0
+        opacity: 0;
     }
 }
 
 @keyframes myAnimPrice {
     0% {
-        -webkit-transform: scale(.1);
-        transform: scale(.1);
-        opacity: 0
+        -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+            opacity: 0;
     }
 
     50% {
-        opacity: .3
+        opacity: 0.3;
     }
 
     100% {
         -webkit-transform: scale(2);
         transform: scale(2);
-        opacity: 0
+        opacity: 0;
     }
 }
 
 .arlo_tm_intro_fixed_price .anim:nth-child(1) {
     -webkit-animation: myAnimPrice 2s infinite;
-    animation: myAnimPrice 2s infinite
+    animation: myAnimPrice 2s infinite;
 }
 
 .arlo_tm_intro_fixed_price .anim:nth-child(2) {
-    -webkit-animation: myAnimPrice 2s infinite .3s;
-    animation: myAnimPrice 2s infinite .3s
+    -webkit-animation: myAnimPrice 2s infinite 0.3s;
+        animation: myAnimPrice 2s infinite 0.3s;
 }
 
 .arlo_tm_intro_fixed_price .anim:nth-child(3) {
@@ -2741,9 +2727,9 @@ body.dark .arlo_tm_settings .cursor li .svg,
     animation: myAnimPrice 2s infinite .6s
 }
 
-/*---------------------------------------------------*/
-/*	16) ARLO MEDIA QUERIES (FOR SMALL DEVICES)
-/*---------------------------------------------------*/
+/*!---------------------------------------------------*/
+/*!	16) ARLO MEDIA QUERIES (FOR SMALL DEVICES)
+/*!---------------------------------------------------*/
 
 @media (max-width: 1600px) {
     .arlo_tm_leftpart {
@@ -3003,38 +2989,53 @@ body.dark .arlo_tm_settings .cursor li .svg,
     }
 }
 
-/* Skills */
+/*!---------------------------------------------------*/
+/*!	-------------------- Skills----------------
+/*!---------------------------------------------------*/
 
-.skills .progress {
-    height: 60px;
-    display: block;
-    background: none;
-    border-radius: 0;
+.skills__experience {
+    margin-bottom: 25px;
+
 }
 
-.skills .progress .skill {
-    padding: 10px 0;
-    margin: 0;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    color: #45505b;
+.skills__wrapper {
+    transition: all 0.3s ease;
+    padding: 38px 150px;
+    border: none;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 2px solid #4788e9;
 }
 
-.skills .progress .skill .val {
-    float: right;
-    font-style: normal;
+.frontend__development {
+    margin: 0 auto 32px auto;
+    color: #000;
 }
 
-.skills .progress-bar-wrap {
-    background: #f2f3f5;
+.experience__details {
+    display: flex;
+    width: 200px;
+    gap: 10px;
+    margin-bottom: 50px;
+    cursor: pointer;
 }
 
-.skills .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: 0.9s;
-    background-color: #0563bb;
+.experience__details img {
+    margin-top: 6px;
+    width: 20px;
+    height: 20px;
 }
 
+.experience__details a {
+    text-decoration: none;
+    color: black;
+}
+
+.skills__list {
+    display: flex;
+    width: 800px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
