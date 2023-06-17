@@ -309,10 +309,10 @@ function arlo_tm_animate_text() {
 
   animateSpan.typed({
     strings: [
-      "'m a Frontend Developer",
-      "'m a photographer",
-      "'m a sister too",
-      "'m a teacher also",
+      "Frontend Developer",
+      "Photographer",
+      "Sister",
+      "Teacher",
     ],
     loop: true,
     startDelay: 1e3,
