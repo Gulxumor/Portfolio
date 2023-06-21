@@ -308,12 +308,7 @@ function arlo_tm_animate_text() {
   let animateSpan = jQuery(".arlo_tm_animation_text_word");
 
   animateSpan.typed({
-    strings: [
-      "Frontend Developer",
-      "Photographer",
-      "Sister",
-      "Teacher",
-    ],
+    strings: ["Frontend Developer", "Photographer"],
     loop: true,
     startDelay: 1e3,
     backDelay: 2e3,
@@ -326,9 +321,8 @@ function arlo_tm_animate_text() {
 
 function arlo_tm_popup() {
   jQuery(".gallery_zoom").each(function () {
-    // the containers for all your galleries
     jQuery(this).magnificPopup({
-      delegate: "a.zoom", // the selector for gallery item
+      delegate: "a.zoom",
       type: "image",
       gallery: {
         enabled: true,
@@ -665,13 +659,11 @@ function arlo_tm_location() {
 // -------------------------------------------------
 
 function arlo_tm_ripple() {
-
-
-    jQuery('#ripple').ripples({
-        resolution: 500,
-        dropRadius: 20,
-        perturbance: 0.04
-    });
+  jQuery("#ripple").ripples({
+    resolution: 500,
+    dropRadius: 20,
+    perturbance: 0.04,
+  });
 }
 
 // -------------------------------------------------
@@ -679,15 +671,15 @@ function arlo_tm_ripple() {
 // -------------------------------------------------
 
 $(".glitch").mgGlitch({
-    destroy: false,
-    glitch: true,
-    scale: true,
-    blend: true,
-    blendModeType: "hue",
-    glitch1TimeMin: 200,
-    glitch1TimeMax: 400,
-    glitch2TimeMin: 10,
-    glitch2TimeMax: 100
+  destroy: false,
+  glitch: true,
+  scale: true,
+  blend: true,
+  blendModeType: "hue",
+  glitch1TimeMin: 200,
+  glitch1TimeMax: 400,
+  glitch2TimeMin: 10,
+  glitch2TimeMax: 100,
 });
 
 // -------------------------------------------------
@@ -695,7 +687,7 @@ $(".glitch").mgGlitch({
 // -------------------------------------------------
 
 function arlo_tm_videoplayer() {
-    $(".youtube-bg").mb_YTPlayer();
+  $(".youtube-bg").mb_YTPlayer();
 }
 
 // -----------------------------------------------------
@@ -703,32 +695,13 @@ function arlo_tm_videoplayer() {
 // -----------------------------------------------------
 
 function arlo_tm_about_animation() {
-
-
-    if ($('.parallax').length > 0) {
-        let scene = $('.parallax').get(0);
-        let parallax = new Parallax(scene, {
-            relativeInput: true,
-            onReady: function () {
-                console.log('ready!');
-            }
-        });
-    }
+  if ($(".parallax").length > 0) {
+    let scene = $(".parallax").get(0);
+    let parallax = new Parallax(scene, {
+      relativeInput: true,
+      onReady: function () {
+        console.log("ready!");
+      },
+    });
+  }
 }
-
-//-------------------------------------------------
-// -------------    Skills animation    -----------
-// ------------------------------------------------
-// let skilsContent = select('.skills-content');
-// if (skilsContent) {
-//     new Waypoint({
-//         element: skilsContent,
-//         offset: '80%',
-//         handler: function (direction) {
-//             let progress = select('.progress .progress-bar', true);
-//             progress.forEach((el) => {
-//                 el.style.width = el.getAttribute('aria-valuenow') + '%'
-//             });
-//         }
-//     })
-// }
